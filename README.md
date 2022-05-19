@@ -28,11 +28,13 @@ npm install react-virtualized --legacy-peer-deps
 
 typescript errors
 
-> 1.  go to **_ProjectRoot/node_modules/@types/react-virtualized_**
+> 1.  delete package-lock.json
 >
-> 2.  find and delete **node_modules** folder
+> 2.  go to **_ProjectRoot/node_modules/@types/react-virtualized_**
 >
-> 3.  run `npm install`
+> 3.  find and delete **node_modules** folder
+>
+> 4.  run `npm install`
 
 # Run
 
