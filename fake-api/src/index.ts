@@ -29,7 +29,7 @@ app.listen(PORT, () => {
 })
 
 /**
- * @description populate with db with N number of entries
+ * @description populate db with N number of entries
  */
 // comment this line out after initial population
 // populateDatabase(500)
