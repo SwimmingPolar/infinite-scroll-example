@@ -70,6 +70,6 @@ Because some files are referred as absolute path, you need to open each project 
 - sticky/fixed header
 - responsive/resize
 
-# things to consider
+# - things to consider
 
 - invalidate data to refetch on focus
