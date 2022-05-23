@@ -7,6 +7,7 @@ import {
 } from 'react'
 
 import { useLocation } from 'react-router-dom'
+import styled from 'styled-components'
 
 import { once } from 'libs/utils'
 
@@ -16,6 +17,16 @@ const ScrollRestorationContext = createContext({
   childMounted: false,
   _provider: false
 })
+
+/**
+ * hide child on condition
+ */
+interface HideOnRestoreProps {
+  childMounted: boolean
+}
+const HideOnRestore = styled.div<HideOnRestoreProps>`
+  visibility: ${({ childMounted }) => (childMounted ? 'visible' : 'hidden')};
+`
 
 /**
  * ScrollRestoration: parent
@@ -42,9 +53,9 @@ export const ScrollRestoration = ({ children }: { children: JSX.Element }) => {
 
   return (
     <ScrollRestorationContext.Provider value={value}>
-      <div style={{ visibility: value.childMounted ? 'visible' : 'hidden' }}>
+      <HideOnRestore childMounted={value.childMounted}>
         {children}
-      </div>
+      </HideOnRestore>
     </ScrollRestorationContext.Provider>
   )
 }

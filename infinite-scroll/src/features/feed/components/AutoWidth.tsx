@@ -1,5 +1,7 @@
 import { useCallback, useRef, useState, useEffect } from 'react'
 
+import { debounce } from 'libs/utils'
+
 let memoizedWidth = 0
 /**
  *  This component will be rendered twice
@@ -28,6 +30,14 @@ export default function AutoWidth({ children }: AutoWidthProps) {
     return true
   }, [])
 
+  const debouncedUpdate = useCallback(
+    debounce(() => {
+      const lastMeasuredWidth = getWidth()
+      updateWidth(lastMeasuredWidth)
+    }),
+    []
+  )
+
   const resizeHandler = useCallback(() => {
     const newWidth = getWidth()
     if (newWidth === memoizedWidth) return
@@ -38,10 +48,7 @@ export default function AutoWidth({ children }: AutoWidthProps) {
      *  @issue This component will be rendered twice
      * maybe debounce it?
      */
-    setTimeout(() => {
-      const lastMeasuredWidth = getWidth()
-      updateWidth(lastMeasuredWidth)
-    }, 0)
+    setTimeout(debouncedUpdate, 0)
   }, [updateWidth])
 
   useEffect(() => {

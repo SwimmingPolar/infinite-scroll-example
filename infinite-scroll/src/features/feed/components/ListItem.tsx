@@ -16,7 +16,7 @@ const ListItemBox = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  box-shadow: 0px 0px 15px 2px #1d1f26;
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.45);
   border-radius: 6px;
 
   @media (max-width: 716px) {
