@@ -1,8 +1,13 @@
 # Getting Started
 
-This is react typescript infinite scroll example using [react-virtualized](https://github.com/bvaughn/react-virtualized).
+[DEMO](https://sp-infinite-scroll-frontend.herokuapp.com/)
 
-# Installation
+This is react typescript infinite scroll example using [react-virtualized](https://github.com/bvaughn/react-virtualized).
+I don't recommend using it though.
+
+https://github.com/bvaughn/react-virtualized/issues/1655#issuecomment-1051401739
+
+# - Installation
 
 ## Prerequites
 
@@ -18,27 +23,9 @@ Execute command under each folder.
 - infinite-scroll
 - fake-api
 
-## Errors
+# - Run
 
-dependencies errors
-
-```
-npm install react-virtualized --legacy-peer-deps
-```
-
-typescript errors
-
-> 1.  delete package-lock.json
->
-> 2.  go to **_ProjectRoot/node_modules/@types/react-virtualized_**
->
-> 3.  find and delete **node_modules** folder
->
-> 4.  run `npm install`
-
-# Run
-
-Before starting react project, go to **_fake-api/src/index.ts_**
+Go to **_fake-api/src/index.ts_**
 
 ```typescript
 /**
@@ -47,7 +34,7 @@ Before starting react project, go to **_fake-api/src/index.ts_**
 populateDatabase(500);
 ```
 
-comment this line out after initial execution and re-start the server.
+- comment this line out after initial execution and re-start the server.
 
 **_fake-api/src/api/posts/index.ts_**
 
@@ -58,7 +45,11 @@ comment this line out after initial execution and re-start the server.
 await sleep(1750);
 ```
 
-slow down response on server-side. (can be done via browser)
+- slow down response on server-side. (can be done via browser)
+
+---
+
+Because some files are referred as absolute path, you need to open each project as root folder.
 
 ## fake-api
 
@@ -68,12 +59,12 @@ slow down response on server-side. (can be done via browser)
 
 `npm start` : starts dev server on port 3000 and api requests will be redirected to fake-api server. (see **_infinite-scroll/package.json_**)
 
-# features
+# - features
 
 - list windowing
 - full page infinite loading
 - scroll to top on navigation
-- scroll to top on active link click (prevents refreshing)
+- scroll to top on active link click (prevents refreshing and can be addressed)
 - auto width/height
 - scroll restoration on feed page
 - sticky/fixed header
