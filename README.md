@@ -1,6 +1,6 @@
 # Getting Started
 
-<a href="https://sp-infinite-scroll-frontend.herokuapp.com/" target="_blank">DEMO</a>
+<a href="https://sp-infinite-scroll-frontend.herokuapp.com/" target="_blank">DEMO</a> (It will take few seconds to start the server)
 
 This is react typescript infinite scroll example using [react-virtualized](https://github.com/bvaughn/react-virtualized).
 I don't recommend using it though.
