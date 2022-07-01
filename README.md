@@ -64,7 +64,7 @@ Because some files are referred as absolute path, you need to open each project 
 - list windowing
 - full page infinite loading
 - scroll to top on navigation
-- scroll to top on active link click (prevents refreshing and can be addressed)
+- scroll to top on active link click (this prevents refreshing but can be addressed)
 - auto width/height
 - scroll restoration on feed page
 - sticky/fixed header
