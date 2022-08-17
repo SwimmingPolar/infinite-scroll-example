@@ -45,9 +45,10 @@ export const ScrollRestoration = ({ children }: { children: JSX.Element }) => {
 
   useEffect(() => {
     const handleScroll = () => scrollStorage.set(pathname, window.scrollY)
-    window.addEventListener('scroll', handleScroll)
+//     window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+         handleScroll()
+//       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
