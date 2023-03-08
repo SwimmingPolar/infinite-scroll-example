@@ -1,10 +1,10 @@
 # Getting Started
 
 <a href="https://sp-infinite-scroll-frontend.herokuapp.com/" target="_blank">DEMO</a><br/><br/>
-Demo is no logner available due to heroku ending freetier. Local installation will still show demo though.
+Demo is no logner available due to heroku ending freetier. Local installation will still show demo.
 
 This is react typescript infinite scroll example using [react-virtualized](https://github.com/bvaughn/react-virtualized).
-I don't recommend using it though. (Alternatives: [React-Virtuoso](https://virtuoso.dev/))
+I do not recommend using it. (Alternatives: [React-Virtuoso](https://virtuoso.dev/))
 
 https://github.com/bvaughn/react-virtualized/issues/1655#issuecomment-1051401739
 
